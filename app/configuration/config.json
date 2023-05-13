@@ -1,0 +1,314 @@
+{
+    "diabetes": {
+        "model": {
+            "directory": "app/models/trained_models",
+            "sub_directory": "diabetes",
+            "last_model_name": "model_finale.h5"
+        },
+        "data": {
+            "directory": "app/data",
+            "sub_directory": "raw",
+            "file_name": "diabetes.csv",
+            "classification_column": "diabetes",
+            "classification_mapping": { "No diabetes": 0, "Diabetes": 1 },
+            "id_column": "patient_number"
+        },
+        "columns": {
+            "patient_number": {
+                "input_column": "patient_number",
+                "output_column": "patient_id",
+                "type": "Int64",
+                "normalize": "None"
+            },
+            "cholesterol": {
+                "input_column": "cholesterol",
+                "output_column": "cholesterol_level",
+                "type": "Int64",
+                "normalize": "min-max"
+            },
+            "glucose": {
+                "input_column": "glucose",
+                "output_column": "glucose_level",
+                "type": "Int64",
+                "normalize": "min-max"
+            },
+            "hdl_chol": {
+                "input_column": "hdl_chol",
+                "output_column": "hdl_cholesterol",
+                "type": "Int64",
+                "normalize": "min-max"
+            },
+            "chol_hdl_ratio": {
+                "input_column": "chol_hdl_ratio",
+                "output_column": "cholesterol_hdl_ratio",
+                "type": "float32",
+                "normalize": "min-max"
+            },
+            "age": {
+                "input_column": "age",
+                "output_column": "age",
+                "type": "Int64",
+                "normalize": "min-max"
+            },
+            "gender": {
+                "input_column": "gender",
+                "output_column": "gender",
+                "type": "string",
+                "normalize": "None"
+            },
+            "height": {
+                "input_column": "height",
+                "output_column": "height",
+                "type": "Int64",
+                "normalize": "min-max"
+            },
+            "weight": {
+                "input_column": "weight",
+                "output_column": "weight",
+                "type": "Int64",
+                "normalize": "min-max"
+            },
+            "bmi": {
+                "input_column": "bmi",
+                "output_column": "body_mass_idx",
+                "type": "float32",
+                "normalize": "min-max"
+            },
+            "systolic_bp": {
+                "input_column": "systolic_bp",
+                "output_column": "systolic_blood_pressure",
+                "type": "Int64",
+                "normalize": "min-max"
+            },
+            "diastolic_bp": {
+                "input_column": "diastolic_bp",
+                "output_column": "diastolic_blood_pressure",
+                "type": "Int64",
+                "normalize": "min-max"
+            },
+            "waist": {
+                "input_column": "waist",
+                "output_column": "waist_size",
+                "type": "Int64",
+                "normalize": "min-max"
+            },
+            "hip": {
+                "input_column": "hip",
+                "output_column": "hip_size",
+                "type": "Int64",
+                "normalize": "min-max"
+            },
+            "waist_hip_ratio": {
+                "input_column": "waist_hip_ratio",
+                "output_column": "waist_hip_size_ratio",
+                "type": "float32",
+                "normalize": "min-max"
+            },
+            "diabetes": {
+                "input_column": "diabetes",
+                "output_column": "diabetes",
+                "type": "string",
+                "normalize": "None"
+            }
+
+        }
+    },
+    "LungCancer": {
+        "model": {
+            "directory": "app/models/trained_models",
+            "sub_directory": "lungcancer",
+            "last_model_name": "model_finale.pkl"
+        },
+
+        "data": {
+            "directory": "app/data",
+            "sub_directory": "raw",
+            "file_name": "cancer_leng.csv",
+            "classification_column": "Level",
+            "classification_mapping": { "Low": 0, "Medium": 1, "High": 2 },
+            "id_column": "Patient Id",
+            "index_column": "index"
+        },
+
+        "columns": {
+            "index": {
+                "input_column": "index",
+                "output_column": "index_patient",
+                "type": "Int64",
+                "normalize": "None"
+            },
+            "Patient Id": {
+                "input_column": "Patient Id",
+                "output_column": "patient_id",
+                "type": "string",
+                "normalize": "None"
+            },
+            "Age": {
+                "input_column": "Age",
+                "output_column": "Age",
+                "type": "Int64",
+                "normalize": "min-max"
+            },
+            "Gender": {
+                "input_column": "Gender",
+                "output_column": "Gender",
+                "type": "Int64",
+                "normalize": "None"
+            },
+            "Air Pollution": {
+                "input_column": "Air Pollution",
+                "output_column": "Air_Pollution",
+                "type": "Int64",
+                "normalize": "None"
+            },
+            "Alcohol use": {
+                "input_column": "Alcohol use",
+                "output_column": "Alcohol_use",
+                "type": "Int64",
+                "normalize": "None"
+            },
+            "Dust Allergy": {
+                "input_column": "Dust Allergy",
+                "output_column": "Dust_Allergy",
+                "type": "Int64",
+                "normalize": "None"
+            },
+            "OccuPational Hazards": {
+                "input_column": "OccuPational Hazards",
+                "output_column": "OccuPational_Hazards",
+                "type": "Int64",
+                "normalize": "None"
+            },
+            "Genetic Risk": {
+                "input_column": "Genetic Risk",
+                "output_column": "Genetic_Risk",
+                "type": "Int64",
+                "normalize": "None"
+            },
+            "chronic Lung Disease": {
+                "input_column": "chronic Lung Disease",
+                "output_column": "chronic_Lung_Disease",
+                "type": "Int64",
+                "normalize": "None"
+            },
+            "Balanced Diet": {
+                "input_column": "Balanced Diet",
+                "output_column": "Balanced_Diet",
+                "type": "Int64",
+                "normalize": "None"
+            },
+            "Obesity": {
+                "input_column": "Obesity",
+                "output_column": "Obesity",
+                "type": "Int64",
+                "normalize": ""
+            },
+            "Smoking": {
+                "input_column": "Smoking",
+                "output_column": "Smoking",
+                "type": "Int64",
+                "normalize": "None"
+            },
+            "Passive Smoker": {
+                "input_column": "Passive Smoker",
+                "output_column": "Passive_Smoker",
+                "type": "Int64",
+                "normalize": "None"
+            },
+            "Chest Pain": {
+                "input_column": "Chest Pain",
+                "output_column": "Chest_Pain",
+                "type": "Int64",
+                "normalize": "None"
+            },
+            "Coughing of Blood": {
+                "input_column": "Coughing of Blood",
+                "output_column": "Coughing_of_Blood",
+                "type": "Int64",
+                "normalize": "None"
+            },
+            "Fatigue": {
+                "input_column": "Fatigue",
+                "output_column": "Fatigue",
+                "type": "Int64",
+                "normalize": "None"
+            },
+            "Weight Loss": {
+                "input_column": "Weight Loss",
+                "output_column": "Weight_Loss",
+                "type": "Int64",
+                "normalize": "None"
+            },
+            "Shortness of Breath": {
+                "input_column": "Shortness of Breath",
+                "output_column": "Shortness_of_Breath",
+                "type": "Int64",
+                "normalize": "None"
+            },
+            "Wheezing": {
+                "input_column": "Wheezing",
+                "output_column": "Wheezing",
+                "type": "Int64",
+                "normalize": "None"
+            },
+            "Swallowing Difficulty": {
+                "input_column": "Swallowing Difficulty",
+                "output_column": "Swallowing_Difficulty",
+                "type": "Int64",
+                "normalize": "None"
+            },
+            "Clubbing of Finger Nails": {
+                "input_column": "Clubbing of Finger Nails",
+                "output_column": "Clubbing_of_Finger_Nails",
+                "type": "Int64",
+                "normalize": "None"
+            },
+            "Frequent Cold": {
+                "input_column": "Frequent Cold",
+                "output_column": "Frequent_Cold",
+                "type": "Int64",
+                "normalize": "None"
+            },
+            "Dry Cough": {
+                "input_column": "Dry Cough",
+                "output_column": "Dry_Cough",
+                "type": "Int64",
+                "normalize": "None"
+            },
+            "Snoring": {
+                "input_column": "Snoring",
+                "output_column": "Snoring",
+                "type": "Int64",
+                "normalize": "None"
+            },
+            "Level": {
+                "input_column": "Level",
+                "output_column": "Level",
+                "type": "string",
+                "normalize": "None"
+            }
+
+        }
+
+    },
+    "pneumonia": {
+        "data": {
+            "directory": "data",
+            "sub_directory": "images",
+            "directory_name": "chest_xray",
+            "train_directory": "train",
+            "test_directory": "test",
+            "validation_directory": "val",
+            "classification_pneumonia_folders": "PNEUMONIA",
+            "classification_normal_folders": "NORMAL"
+        },
+        "models": {
+            "directory": "app/models",
+            "sub_directory": "trained_models",
+            "directory_name": "pneumonia",
+            "moco": "moco_pretrain/mocco_model_99.pth",
+            "classifier": "classifier/classification_model_train_e30.pth",
+            "encoder": "encoder/trained_encoder.pth"
+        }
+    }
+}
